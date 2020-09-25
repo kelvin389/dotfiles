@@ -1,5 +1,6 @@
-" map jk to escape while in insert mode
+" map jk and kj to escape while in insert mode
 inoremap jk <Esc>
+inoremap kj <Esc>
 " map ctrl-j and ctrl-k to scroll 1 line while in normal mode
 nnoremap <c-j> <c-e>
 nnoremap <c-k> <c-y>
@@ -17,11 +18,27 @@ noremap 0 ^
 " syntax highlighting
 syntax on
 
-" color scheme
-colorscheme peachpuff
+" merge vim register with OS clipboard
+set clipboard=unnamed
 
-" comment color to green
-highlight Comment ctermfg=green
+" Influences the working of <BS>, <Del>, CTRL-W and CTRL-U in Insert
+" mode.  This is a list of items, separated by commas.  Each item allows
+" a way to backspace over something:
+set backspace=2
+
+" gui vim font
+if has("gui_running")
+    set guifont=Consolas:h12:cANSI
+endif
+
+" custom color scheme for gui
+try
+    colorscheme seoul256 
+    let g:seoul256_background=234
+    colo seoul256
+catch
+    colorscheme peachpuff
+endtry
 
 " set tab size to 4 spaces
 set tabstop=4
