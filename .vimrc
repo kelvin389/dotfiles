@@ -24,6 +24,7 @@ set backspace=2
 
 " default color scheme (overwritten at bottom of script if using gui)
 colorscheme peachpuff
+highlight Comment ctermfg=Green
 
 " set tab size to 4 spaces
 set tabstop=4
