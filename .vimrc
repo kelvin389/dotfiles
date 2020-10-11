@@ -1,14 +1,10 @@
-" map jk and kj to escape while in insert mode
+" map jk to exit insert mode
 inoremap jk <Esc>
-inoremap kj <Esc>
-" map ctrl-j and ctrl-k to scroll 1 line while in normal mode
-nnoremap <c-j> <c-e>
-nnoremap <c-k> <c-y>
-"map shift-j and shift-k to scroll half a screen while in normal mode
-nnoremap <s-j> <c-d>
-nnoremap <s-k> <c-u>
+"map shift-j and shift-k to scroll half a screen
+noremap <s-j> <c-d>
+noremap <s-k> <c-u>
 
-" clear search when hitting return (enter)
+" clear search when hitting return (enter) in normal mode
 nnoremap <CR> :noh<CR><CR>
 
 " 0 to go to first non white space rather than
