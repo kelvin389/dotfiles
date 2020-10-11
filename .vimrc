@@ -22,19 +22,8 @@ set clipboard=unnamed
 " a way to backspace over something:
 set backspace=2
 
-" gui vim font
-if has("gui_running")
-    set guifont=Consolas:h12:cANSI
-endif
-
-" custom color scheme for gui
-try
-    colorscheme seoul256 
-    let g:seoul256_background=234
-    colo seoul256
-catch
-    colorscheme peachpuff
-endtry
+" default color scheme (overwritten at bottom of script if using gui)
+colorscheme peachpuff
 
 " set tab size to 4 spaces
 set tabstop=4
@@ -77,3 +66,21 @@ endif
 :  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
 :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
+
+" commands for gui vim
+if has("gui_running")
+
+    " change font to 12pt consolas
+    set guifont=Consolas:h12:cANSI
+
+    " try overwriting color scheme
+    try
+        colorscheme seoul256 
+        let g:seoul256_background=234
+        colo seoul256
+    endtry
+
+    " set window size default
+    set lines=28
+    set columns=98
+endif
