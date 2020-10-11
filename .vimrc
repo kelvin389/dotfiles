@@ -1,11 +1,19 @@
+" clear space remaps
+nnoremap <space> <nop>
+" set leader to space
+let mapleader=" "
+
 " map jk to exit insert mode
 inoremap jk <Esc>
 "map shift-j and shift-k to scroll half a screen
 noremap <s-j> <c-d>
 noremap <s-k> <c-u>
 
+" <space><space> to search
+nnoremap <leader><leader> /
+
 " clear search when hitting return (enter) in normal mode
-nnoremap <CR> :noh<CR><CR>
+nnoremap <CR> :noh<CR>
 
 " 0 to go to first non white space rather than
 " beginning of line
@@ -24,7 +32,6 @@ set backspace=2
 
 " default color scheme (overwritten at bottom of script if using gui)
 colorscheme peachpuff
-highlight Comment ctermfg=Green
 
 " set tab size to 4 spaces
 set tabstop=4
