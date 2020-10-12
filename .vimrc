@@ -15,15 +15,15 @@ nnoremap <leader><leader> /
 " clear search when hitting return (enter) in normal mode
 nnoremap <CR> :noh<CR>
 
+" <space>p to paste from os clipboard
+noremap <leader>p "+p
+
 " 0 to go to first non white space rather than
 " beginning of line
 noremap 0 ^
 
 " syntax highlighting
 syntax on
-
-" merge vim register with OS clipboard
-set clipboard=unnamed
 
 " Influences the working of <BS>, <Del>, CTRL-W and CTRL-U in Insert
 " mode.  This is a list of items, separated by commas.  Each item allows
