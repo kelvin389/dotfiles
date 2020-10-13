@@ -11,16 +11,20 @@ noremap <s-k> <c-u>
 
 " <space><space> to search
 nnoremap <leader><leader> /
-
 " clear search when hitting return (enter) in normal mode
 nnoremap <CR> :noh<CR>
 
 " <space>p to paste from os clipboard
 noremap <leader>p "+p
+" <space>y to yank to os clipboard
+noremap <leader>y "+y
 
 " 0 to go to first non white space rather than
 " beginning of line
 noremap 0 ^
+
+" map ctrl+backspace to delete the previous word (similar to windows)
+inoremap <c-bs> <c-w>
 
 " syntax highlighting
 syntax on
