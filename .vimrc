@@ -12,7 +12,7 @@ noremap <s-k> <c-u>
 " <space><space> to search
 nnoremap <leader><leader> /
 " clear search when hitting return (enter) in normal mode
-nnoremap <CR> :noh<CR>
+nnoremap <cr> :noh<cr>
 
 " <space>p to paste from os clipboard
 noremap <leader>p "+p
@@ -23,7 +23,7 @@ noremap <leader>y "+y
 " beginning of line
 noremap 0 ^
 
-" map ctrl+backspace to delete the previous word (similar to windows)
+" map ctrl+backspace to delete the previous word (like on windows)
 inoremap <c-bs> <c-w>
 
 " syntax highlighting
