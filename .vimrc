@@ -22,7 +22,7 @@ noremap <leader>y "+y
 " H to go to first non whitespace character
 noremap H ^
 " L to go to last non whitespace character
-noremap C g_
+noremap L g_
 
 " map ctrl+backspace to delete the previous word (like on windows)
 inoremap <c-bs> <c-w>
