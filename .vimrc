@@ -19,9 +19,10 @@ noremap <leader>p "+p
 " <space>y to yank to os clipboard
 noremap <leader>y "+y
 
-" 0 to go to first non white space rather than
-" beginning of line
-noremap 0 ^
+" H to go to first non whitespace character
+noremap H ^
+" L to go to last non whitespace character
+noremap C g_
 
 " map ctrl+backspace to delete the previous word (like on windows)
 inoremap <c-bs> <c-w>
