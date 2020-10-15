@@ -41,6 +41,7 @@ highlight Comment ctermfg=Green
 
 " set tab size to 4 spaces
 set tabstop=4
+set softtabstop=4 " backspacing an indented line will erase 4 spaces
 set shiftwidth=4 
 
 " spaces instead of tabs
