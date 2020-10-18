@@ -1,3 +1,21 @@
+"""""""""""""""""""""""""""""
+" Plugins
+"""""""""""""""""""""""""""""
+if has('win32')
+    let $PLUGDIR = "~/vimfiles/plugged"
+else
+    let $PLUGDIR = "~/.vim/plugged"
+endif
+
+call plug#begin($PLUGDIR)
+
+Plug 'junegunn/seoul256.vim' " theme
+
+call plug#end()
+
+"""""""""""""""""""""""""""""
+" Remaps
+"""""""""""""""""""""""""""""
 " clear space remaps
 nnoremap <space> <nop>
 " set leader to space
@@ -38,18 +56,37 @@ noremap L g_
 " doesnt work on default mac catalina termianl (zsh)
 inoremap <c-bs> <c-w>
 
-" default color scheme (overwritten at bottom of script if using gui)
-colorscheme peachpuff
+
+"""""""""""""""""""""""""""""
+" Visuals
+"""""""""""""""""""""""""""""
+" theme
+let g:seoul256_background=234
+color seoul256
 
 " syntax highlighting
 syntax on
-highlight Comment ctermfg=Green
 
 " change terminal cursor based on mode
 let &t_SI.="\e[5 q" " insert mode = blinking line
 let &t_SR.="\e[4 q" " replace mode = underscore
 let &t_EI.="\e[1 q" " normal mode = blinking block
 
+" commands for gui vim
+if has("gui_running")
+
+    " change font to 12pt consolas
+    set guifont=Consolas:h12:cANSI
+
+    " set window size default
+    set lines=28
+    set columns=98
+endif
+
+
+"""""""""""""""""""""""""""""
+" Functionality Settings
+"""""""""""""""""""""""""""""
 " allow backspacing over indents, start of lines, and end of lines
 " same as 'set backspace=indent,eol,start'
 set backspace=2
@@ -101,20 +138,3 @@ endif
 :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
 
-" commands for gui vim
-if has("gui_running")
-
-    " change font to 12pt consolas
-    set guifont=Consolas:h12:cANSI
-
-    " try overwriting color scheme
-    try
-        colorscheme seoul256 
-        let g:seoul256_background=234
-        colo seoul256
-    endtry
-
-    " set window size default
-    set lines=28
-    set columns=98
-endif
