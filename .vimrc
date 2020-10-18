@@ -3,10 +3,10 @@ nnoremap <space> <nop>
 " set leader to space
 let mapleader=" "
 
-" <space> qq to quickly save (if there were changes) and exit
-noremap <leader>qq :x<cr>
-" <space> w to quickly save (if there were changes)
-noremap <leader>w :update<cr>
+" <space> qq to quickly save (if there were changes) and exit in normal mode
+nnoremap <leader>qq :x<cr>
+" <space> w to quickly save (if there were changes) in normal mode
+nnoremap <leader>w :update<cr>
 
 " make q do nothing
 noremap q <nop>
