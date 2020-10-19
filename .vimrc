@@ -9,7 +9,7 @@ endif
 
 call plug#begin($PLUGDIR)
 
-Plug 'junegunn/seoul256.vim' " theme
+Plug 'junegunn/seoul256.vim'
 
 call plug#end()
 
@@ -53,8 +53,10 @@ noremap H ^
 noremap L g_
 
 " map ctrl+backspace to delete the previous word
-" doesnt work on default mac catalina termianl (zsh)
+" non-terminal
 inoremap <c-bs> <c-w>
+" terminal
+inoremap <c-h> <c-w>
 
 
 """""""""""""""""""""""""""""
@@ -137,4 +139,3 @@ endif
 :  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
 :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
-
