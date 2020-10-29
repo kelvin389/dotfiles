@@ -22,7 +22,7 @@ nnoremap <space> <nop>
 " set leader to space
 let mapleader=" "
 
-" <space> qq to quickly save (if there were changes)
+" <space> qq to quickly save and exit (if there were changes)
 nnoremap <leader>qq :x<cr>
 " <space> w to quickly save (if there were changes)
 nnoremap <leader>w :update<cr>
