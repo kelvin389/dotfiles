@@ -13,6 +13,7 @@ Plug 'junegunn/seoul256.vim'
 
 call plug#end()
 
+
 """""""""""""""""""""""""""""
 " Remaps
 """""""""""""""""""""""""""""
@@ -21,10 +22,12 @@ nnoremap <space> <nop>
 " set leader to space
 let mapleader=" "
 
-" <space> qq to quickly save (if there were changes) and exit in normal mode
+" <space> qq to quickly save (if there were changes)
 nnoremap <leader>qq :x<cr>
-" <space> w to quickly save (if there were changes) in normal mode
+" <space> w to quickly save (if there were changes)
 nnoremap <leader>w :update<cr>
+" <space> dd to delete contents of current file without saving to a register
+nnoremap <leader>dd :%d_<cr>
 
 " make q do nothing
 noremap q <nop>
@@ -33,9 +36,6 @@ noremap Q q
 
 " map jk to exit insert mode
 inoremap jk <Esc>
-"map shift-j and shift-k to scroll half a screen
-noremap <s-j> <c-d>
-noremap <s-k> <c-u>
 
 " <space><space> to search
 nnoremap <leader><leader> /
