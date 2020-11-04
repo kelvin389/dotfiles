@@ -71,8 +71,9 @@ inoremap <c-h> <c-w>
 " Visuals
 """""""""""""""""""""""""""""
 " theme
-let g:seoul256_background=234
+let g:seoul256_background=233
 color seoul256
+set termguicolors
 
 " syntax highlighting
 syntax on
