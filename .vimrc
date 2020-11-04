@@ -50,8 +50,10 @@ nnoremap <cr> :noh<cr>
 
 " <space>p to paste from os clipboard
 noremap <leader>p "+p
+noremap <leader>P "+P
 " <space>y to yank to os clipboard
 noremap <leader>y "+y
+noremap <leader>Y "+Y
 
 " H to go to first non whitespace character
 noremap H ^
