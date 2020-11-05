@@ -74,21 +74,22 @@ inoremap <c-h> <c-w>
 " statusline
 set laststatus=2
 let g:lightline = {
-      \ 'colorscheme': 'seoul256',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'filename' ] ],
-      \ },
-      \ 'component_function': {
-      \   'filename': 'LightlineFilename',
-      \ },
-      \ }
+   \ 'colorscheme': 'seoul256',
+   \ 'active': {
+   \     'left': [ [ 'mode', 'paste' ],
+   \               [ 'filename' ] ],
+   \ },
+   \ 'component_function': {
+   \     'filename': 'LightlineFilename',
+   \ },
+   \ }
 
+" customize filename to include readonly and modified symbols
 function! LightlineFilename()
-  let filename = expand('%:t') !=# '' ? expand('%:t') : '[No Name]'
-  let readonly = &readonly ? ' [RO]' : ''
-  let modified = &modified ? ' [+]' : ''
-  return filename . readonly . modified
+    let filename = expand('%:t') !=# '' ? expand('%:t') : '[No Name]'
+    let readonly = &readonly ? ' [RO]' : ''
+    let modified = &modified ? ' [+]' : ''
+    return filename . readonly . readonly . modified
 endfunction
 
 " disable mode text
