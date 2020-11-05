@@ -10,6 +10,7 @@ endif
 call plug#begin($PLUGDIR)
 
 Plug 'junegunn/seoul256.vim'
+Plug 'itchyny/lightline.vim'
 
 call plug#end()
 
@@ -70,6 +71,32 @@ inoremap <c-h> <c-w>
 """""""""""""""""""""""""""""
 " Visuals
 """""""""""""""""""""""""""""
+" statusline
+set laststatus=2
+let g:lightline = {
+      \ 'colorscheme': 'seoul256',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'filename' ] ],
+      \ },
+      \ 'component_function': {
+      \   'filename': 'LightlineFilename',
+      \ },
+      \ }
+
+function! LightlineFilename()
+  let filename = expand('%:t') !=# '' ? expand('%:t') : '[No Name]'
+  let readonly = &readonly ? ' [RO]' : ''
+  let modified = &modified ? ' [+]' : ''
+  return filename . readonly . modified
+endfunction
+
+" disable mode text
+set noshowmode
+
+" show search results in bottom right
+set shortmess-=S
+
 " theme
 let g:seoul256_background=233
 color seoul256
