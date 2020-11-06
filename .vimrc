@@ -126,6 +126,9 @@ endif
 """""""""""""""""""""""""""""
 " Functionality Settings
 """""""""""""""""""""""""""""
+" wait 350 ms instead of 1000 in a key combo
+set timeoutlen=350
+
 " allow backspacing over indents, start of lines, and end of lines
 " same as 'set backspace=indent,eol,start'
 set backspace=2
