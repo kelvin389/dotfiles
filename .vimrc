@@ -1,13 +1,7 @@
 """""""""""""""""""""""""""""
 " Plugins
 """""""""""""""""""""""""""""
-if has('win32')
-    let $PLUGDIR = "~/vimfiles/plugged"
-else
-    let $PLUGDIR = "~/.vim/plugged"
-endif
-
-call plug#begin($PLUGDIR)
+call plug#begin("$HOME/.vim/plugged")
 
 Plug 'junegunn/seoul256.vim'
 Plug 'itchyny/lightline.vim'
@@ -126,6 +120,9 @@ endif
 """""""""""""""""""""""""""""
 " Functionality Settings
 """""""""""""""""""""""""""""
+" set swp file directory
+set directory^=$HOME/.vim/swap//  
+
 " wait 350 ms instead of 1000 in a key combo
 set timeoutlen=350
 
