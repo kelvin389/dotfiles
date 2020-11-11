@@ -26,7 +26,7 @@ let mapleader=" "
 " <space> qq to quickly save and exit (if there were changes)
 nnoremap <leader>qq :x<cr>
 " <space> w to quickly save (if there were changes)
-nnoremap <leader>w :update<cr>
+nnoremap <silent> <leader>w :update<cr>
 " <space> dd to delete contents of current file without saving to a register
 nnoremap <leader>dd :%d_<cr>
 
@@ -44,11 +44,14 @@ nnoremap <leader><leader> /
 nnoremap <cr> :noh<cr>
 
 " <space>p to paste from os clipboard
-noremap <leader>p "+p
+noremap <leader>p "+p 
 noremap <leader>P "+P
 " <space>y to yank to os clipboard
 noremap <leader>y "+y
 noremap <leader>Y "+Y
+
+" <space>a to yank to 'a' register
+noremap <leader>ay "ay
 
 " H to go to first non whitespace character
 noremap H ^
@@ -121,13 +124,12 @@ endif
 " Functionality Settings
 """""""""""""""""""""""""""""
 " set swp file directory
-set directory^=$HOME/.vim/swap//  
+set directory=$HOME/.vim/swap//  
 
 " wait 350 ms instead of 1000 in a key combo
 set timeoutlen=350
 
 " allow backspacing over indents, start of lines, and end of lines
-" same as 'set backspace=indent,eol,start'
 set backspace=2
 
 " set tab size to 4 spaces
