@@ -50,8 +50,10 @@ noremap <leader>P "+P
 noremap <leader>y "+y
 noremap <leader>Y "+Y
 
-" <space>a to yank to 'a' register
+" <space>ay to yank to 'a' register
 noremap <leader>ay "ay
+" <space>ap to paste to 'a' register
+noremap <leader>ap "ap
 
 " H to go to first non whitespace character
 noremap H ^
