@@ -13,6 +13,8 @@ call plug#end()
 " Custom Commands
 """""""""""""""""""""""""""""
 command Q execute "q!"
+" yank all to clipboard
+command Y execute "%y+"
 
 
 """""""""""""""""""""""""""""
@@ -41,7 +43,7 @@ inoremap jk <Esc>
 " <space><space> to search
 nnoremap <leader><leader> /
 " clear search when hitting return (enter) in normal mode
-nnoremap <cr> :noh<cr>
+nnoremap <silent> <cr> :noh<cr>
 
 " <space>p to paste from os clipboard
 noremap <leader>p "+p 
@@ -88,7 +90,7 @@ function! LightlineFilename()
     let filename = expand('%:t') !=# '' ? expand('%:t') : '[No Name]'
     let readonly = &readonly ? ' [RO]' : ''
     let modified = &modified ? ' [+]' : ''
-    return filename . readonly . readonly . modified
+    return filename . readonly . modified
 endfunction
 
 " disable mode text
@@ -96,6 +98,10 @@ set noshowmode
 
 " show search results in bottom right
 set shortmess-=S
+
+" always show message when line is changed (yank, n fewer lines, etc)
+" helps to verify if yank to clipboard worked
+set report=0
 
 " theme
 let g:seoul256_background=233
