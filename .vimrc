@@ -118,11 +118,10 @@ let &t_EI.="\e[1 q" " normal mode = blinking block
 
 " commands for gui vim
 if has("gui_running")
-
     " change font to 12pt consolas
     set guifont=Consolas:h12:cANSI
 
-    " set window size default
+    " set default window size
     set lines=28
     set columns=98
 endif
@@ -131,7 +130,7 @@ endif
 """""""""""""""""""""""""""""
 " Functionality Settings
 """""""""""""""""""""""""""""
-" set swp file directory
+" put all swp files in a consistent directory
 set directory=$HOME/.vim/swap//  
 
 " wait 350 ms instead of 1000 in a key combo
@@ -142,7 +141,8 @@ set backspace=2
 
 " set tab size to 4 spaces
 set tabstop=4
-set softtabstop=4 " backspacing an indented line will erase 4 spaces
+" backspacing an indented line will erase 4 spaces
+set softtabstop=4 
 set shiftwidth=4 
 
 " don't allow vim to wrap line in the middle of a word
@@ -159,14 +159,11 @@ set hlsearch
 
 " ignore case if search is all lowercase
 set ignorecase
-" case sensitive if search contains capaital
+" case sensitive if search contains capital
 set smartcase
 
 " continually search as query is typed
 set incsearch
-
-" show ruler in bottom right
-set ruler
 
 " don't allow cursor to be n lines away from top/bottom of window
 set so=5
