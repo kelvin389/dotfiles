@@ -68,6 +68,15 @@ inoremap <c-bs> <c-w>
 " terminal
 inoremap <c-h> <c-w>
 
+" map alt+j to move selected line down
+nnoremap <A-j> :m .+1<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+
+" map alt+k to move selected line up
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-k> :m '<-2<CR>gv=gv
 
 """""""""""""""""""""""""""""
 " Visuals
