@@ -26,7 +26,8 @@ call plug#end()
 """""""""""""""""""""""""""""
 " Custom Commands
 """""""""""""""""""""""""""""
-command Q execute "q!"
+command Q execute "q"
+
 " yank all to clipboard
 command Y execute "%y+"
 
