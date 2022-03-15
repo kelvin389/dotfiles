@@ -71,6 +71,9 @@ inoremap <c-bs> <c-w>
 " terminal
 inoremap <c-h> <c-w>
 
+" unmap Q
+nnoremap Q <nop>
+
 """""""""""""""""""""""""""""
 " Visuals
 """""""""""""""""""""""""""""
